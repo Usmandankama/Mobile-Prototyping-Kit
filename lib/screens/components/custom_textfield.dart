@@ -9,8 +9,8 @@ class CustomTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 320.w,
-      height: 40.h,
+      width: 327.w,
+      height: 48.h,
       child: TextField(
         decoration: InputDecoration(
           hintText: hintText,
@@ -20,7 +20,7 @@ class CustomTextfield extends StatelessWidget {
             child: Icon(icon, size: 20.sp),
           ),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
-          contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+          contentPadding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
         ),
       ),
     );

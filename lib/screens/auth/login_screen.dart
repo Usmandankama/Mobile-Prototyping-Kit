@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:prototyping_kit/screens/auth/components/custom_textfield.dart';
+import 'package:prototyping_kit/screens/components/custom_textfield.dart';
 import 'package:prototyping_kit/screens/components/custom_Button.dart';
 import 'package:prototyping_kit/themes/app_colors.dart';
 
