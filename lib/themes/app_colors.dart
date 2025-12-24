@@ -20,6 +20,7 @@ static const Color primaryMuted = Color(0xFFFDECEA);   // Muted / Background Red
   static const Color gray400 = Color(0xFFC5C6CC);
 
   // ⚫ Neutral – Dark
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
   static const Color gray900 = Color(0xFF1F2024);
   static const Color gray800 = Color(0xFF2F3036);
   static const Color gray700 = Color(0xFF494A50);
