@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:prototyping_kit/screens/auth/login_screen.dart';
+import 'package:prototyping_kit/screens/auth/otp_screen.dart';
+import 'package:prototyping_kit/screens/auth/signup_screen.dart';
 import 'package:prototyping_kit/themes/theme_resolver.dart';
 
 void main() {
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeResolver.light(),
           darkTheme: ThemeResolver.dark(),
           themeMode: ThemeMode.system,
-          home: LoginScreen(),
+          // home: LoginScreen(),
+          // home: SignupScreen(),
+          home: OtpScreen(),
         );
       },
     );
