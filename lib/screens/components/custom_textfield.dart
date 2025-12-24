@@ -19,7 +19,11 @@ class CustomTextfield extends StatelessWidget {
             onTap: () {},
             child: Icon(icon, size: 20.sp),
           ),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
+          border: OutlineInputBorder(
+              borderSide: BorderSide(
+                width: 2.w,
+              ),
+            borderRadius: BorderRadius.circular(8.r)),
           contentPadding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
         ),
       ),
