@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:prototyping_kit/screens/auth/login_screen.dart';
 import 'package:prototyping_kit/screens/auth/otp_screen.dart';
 import 'package:prototyping_kit/screens/auth/signup_screen.dart';
+import 'package:prototyping_kit/screens/chat/chats_screen.dart';
+import 'package:prototyping_kit/screens/chat/messages_screen.dart';
 import 'package:prototyping_kit/screens/subscription/substription_screen.dart';
 import 'package:prototyping_kit/themes/theme_resolver.dart';
 
@@ -29,7 +31,9 @@ class MyApp extends StatelessWidget {
           // home: LoginScreen(),
           // home: SignupScreen(),
           // home: OtpScreen(),
-          home: SubscriptionScreen(),
+          // home: SubscriptionScreen(),
+          home: ChatsScreen(),
+          // home: MessagesScreen(),
         );
       },
     );
