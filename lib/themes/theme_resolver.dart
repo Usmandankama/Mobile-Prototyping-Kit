@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:prototyping_kit/themes/android/android_light.dart';
+import 'package:prototyping_kit/themes/material/material_light.dart';
 
-import 'android/android_dark_theme.dart';
-import 'ios/ios_light_theme.dart';
-import 'ios/ios_dark_theme.dart';
+import 'material/material_dark_theme.dart';
+import 'cupertino/cupertino_light_theme.dart';
+import 'cupertino/cupertino_dark_theme.dart';
 
 class ThemeResolver {
   static ThemeData light() {
