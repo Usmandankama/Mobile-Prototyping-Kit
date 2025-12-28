@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:prototyping_kit/screens/components/custom_button.dart';
 import 'package:prototyping_kit/screens/e-commerce/cart_screen.dart';
+import 'package:prototyping_kit/screens/e-commerce/checkout_screen.dart';
+import 'package:prototyping_kit/screens/e-commerce/components/color_selector.dart';
+import 'package:prototyping_kit/screens/e-commerce/components/size_selector.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
@@ -36,59 +41,30 @@ class ProductDetailsScreen extends StatelessWidget {
                   const SizedBox(height: 16),
 
                   const Text(
-                    'This is a premium cotton T-shirt with amazing quality and comfort.',
+                    'TThe perfect T-shirt for when you want to feel comfortable but still stylish. Amazing for all ocasions. Made of 100% cotton fabric in four colours. Its modern style gives a lighter look to the outfit. Perfect for the warmest days.',
                   ),
 
                   const SizedBox(height: 24),
-                  const Text('Color'),
+                  SizeSelector(),
                   const SizedBox(height: 8),
 
-                  Row(
-                    children: [
-                      _ColorDot(Colors.black),
-                      _ColorDot(Colors.blue),
-                      _ColorDot(Colors.orange),
-                    ],
-                  ),
+                  ColorSelector(),
                 ],
               ),
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const CartScreen()),
-                  );
-                },
-                child: const Text('Add to cart'),
-              ),
-            ),
+          CustomButton(
+            title: 'Add to bag',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CheckoutScreen()),
+              );
+            },
           ),
+          SizedBox(height: 20.h),
         ],
-      ),
-    );
-  }
-}
-
-class _ColorDot extends StatelessWidget {
-  final Color color;
-  const _ColorDot(this.color);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 8),
-      height: 24,
-      width: 24,
-      decoration: BoxDecoration(
-        color: color,
-        shape: BoxShape.circle,
       ),
     );
   }
