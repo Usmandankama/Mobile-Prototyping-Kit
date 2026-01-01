@@ -6,6 +6,9 @@ import 'package:prototyping_kit/screens/auth/signup_screen.dart';
 import 'package:prototyping_kit/screens/chat/chats_screen.dart';
 import 'package:prototyping_kit/screens/chat/messages_screen.dart';
 import 'package:prototyping_kit/screens/e-commerce/ecommerce_home_screen.dart';
+import 'package:prototyping_kit/screens/events/events_screen.dart';
+import 'package:prototyping_kit/screens/feedback/feedback_screen.dart';
+import 'package:prototyping_kit/screens/map/map_screen.dart';
 import 'package:prototyping_kit/screens/subscription/substription_screen.dart';
 import 'package:prototyping_kit/themes/theme_resolver.dart';
 
@@ -35,7 +38,11 @@ class MyApp extends StatelessWidget {
           // home: SubscriptionScreen(),
           // home: ChatsScreen(),
           // home: MessagesScreen(),
-          home: EcommerceHomeScreen(),
+          // home: EcommerceHomeScreen(),
+          // home: FeedbackScreen(),
+          // home: EventsPage(),
+          home: MapListingPage(),
+
         );
       },
     );

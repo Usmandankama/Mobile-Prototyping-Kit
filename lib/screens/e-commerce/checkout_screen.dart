@@ -32,9 +32,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _checkoutSteps(),
-
             const SizedBox(height: 24),
-
             const Text(
               'Choose a payment method',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
@@ -44,17 +42,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               "You won't be charged until you review the order on the next page",
               style: TextStyle(color: Colors.grey.shade600),
             ),
-
             const SizedBox(height: 16),
-
             _creditCardSection(),
-
             const SizedBox(height: 12),
-
             _applePaySection(),
-
             const Spacer(),
-
             CustomButton(title: 'Continue', onPressed: () {  },),
             SizedBox(height: 16.h,)
           ],
@@ -62,18 +54,14 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
     );
   }
-
   // ================= STEPS =================
-
   Widget _checkoutSteps() {
     final steps = ['Your bag', 'Shipping', 'Payment', 'Review'];
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(steps.length, (index) {
         final completed = index < currentStep;
         final active = index == currentStep;
-
         return Column(
           children: [
             CircleAvatar(
@@ -104,9 +92,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       }),
     );
   }
-
   // ================= CREDIT CARD =================
-
   Widget _creditCardSection() {
     return Container(
       padding: const EdgeInsets.all(14),
@@ -118,9 +104,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _radioHeader('Credit Card', true),
-
           const SizedBox(height: 12),
-
           _cardTile(
             title: 'Mastercard',
             number: 'XXXX XXXX XXXX 1234',
@@ -128,15 +112,12 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           ),
           const SizedBox(height: 10),
           _cardTile(title: 'Visa', number: 'XXXX XXXX XXXX 9876', index: 1),
-
           const SizedBox(height: 12),
-
           TextButton.icon(
             onPressed: () {},
             icon: const Icon(Icons.add),
             label: const Text('Add new card'),
           ),
-
           CheckboxListTile(
             contentPadding: EdgeInsets.zero,
             value: billingSame,
@@ -151,14 +132,13 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
     );
   }
-
+  // ================= CARD TILE =================
   Widget _cardTile({
     required String title,
     required String number,
     required int index,
   }) {
     final selected = selectedCard == index;
-
     return GestureDetector(
       onTap: () => setState(() => selectedCard = index),
       child: Container(
@@ -191,9 +171,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
     );
   }
-
   // ================= APPLE PAY =================
-
   Widget _applePaySection() {
     return Container(
       padding: const EdgeInsets.all(14),
@@ -204,7 +182,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       child: _radioHeader('Apple Pay', false),
     );
   }
-
+  // ================= RADIO HEADER =================\
   Widget _radioHeader(String title, bool selected) {
     return Row(
       children: [
@@ -217,6 +195,5 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ],
     );
   }
-
   // ================= CONTINUE BUTTON =================
 }
