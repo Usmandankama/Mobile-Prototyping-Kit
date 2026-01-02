@@ -36,8 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_screenutil: ^5.9.3
   smooth_page_indicator: ^2.0.1
-  maps_flutter: ^1.0.0
-  google_api_headers: ^1.6.0
 
 dev_dependencies:
   flutter_test:
